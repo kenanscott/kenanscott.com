@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KGPTZZ');
+  </script>
+  <!-- End Google Tag Manager -->
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="author" content="Kenan Scott">
+  <title>Gallery - Kenan's Place</title>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGPTZZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <nav>
+      <a href="/">Home</a>
+      <a href="about.html">About</a>
+      <a class="pill-active" href="gallery.html">Gallery</a>
+      <a href="blog.html">Blog</a>
+    </nav>
+    <h1>Kenan's Place</h1>
+  </header>
+  <main>
+    <h3>Gallery</h3>
+    <img class="galleryimage" alt="A photograph showing a sea with a elevated landmass ahead, covered with trees but too far away to see detail." src="images/gallery/rostrevorsouth.jpg">
+    <p>Looking south across the Irish Sea onto the Republic from Rostrevor, Northern Ireland.</p>
+    <img class="galleryimage" alt="A photograph showing a field of green foilage and trees in the background. The orange sun is prominently shown in the top middle of the sky." src="images/gallery/field.jpg">
+    <p>Sunset in the English countryside, Hertfordshire</p>
+    <img class="galleryimage" alt="A photograph of a brown teddy with baby blue clothes. The bear has dirt on it, showing wear. It is lying down outside a gate, next to the pavement and street." src="images/gallery/bear.jpg">
+    <p>Used - Rostrevor, Northern Ireland</p>
+    <img class="galleryimage" alt="A photograph of birds on a lake, about twenty-five of which are standing on the shallow water in a line. Surronuding the lake is green grass and brown trees, due to the winter." src="images/gallery/birds.jpg">
+    <p>A queue of water fowl at River Ver, St. Albans</p>
+    <img class="galleryimage" alt="A photograph of an oil lamp next to a window, the light from the lamp is dim and reflects onto the window, reflecting back the window's many facets." src="images/gallery/lamp.jpg">
+    <p>A warm lamp casting light onto a cold window</p>
+    <img class="galleryimage" alt="A photograph of a trail marker, above head level. The marker has four signs, the most prominent depicts that Harpenden is one half mile to the left." src="images/gallery/nickeyline.jpg">
+    <p>The Nickey Line from the southwestern edges of Harpenden, England.</p>
+    <img class="galleryimage" alt="A photograph of a green forest with a brown and green floor. Straight on ahead are tracks, apparently worn by a vehicle. A bottle is barely visible about three quarters of the way to the horizon and slightly to the right."
+    src="images/gallery/woods.jpg">
+    <p>A trail in the Transylvanian woods</p>
+  </main>
+</body>
+
+</html>

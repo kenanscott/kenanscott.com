@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KGPTZZ');
+  </script>
+  <!-- End Google Tag Manager -->
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="author" content="Kenan Scott">
+  <title>Going to Koha ILS from ResourceMate 3 - Kenan's Place</title>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGPTZZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../gallery.html">Gallery</a>
+      <a class="pill-active" href="../blog.html">Blog</a>
+    </nav>
+    <h1>Kenan's Place</h1>
+  </header>
+  <article>
+    <h3>Going to Koha ILS from ResourceMate 3</h3>
+    <h5>Kenan Scott<br>16 August 2013</h5>
+    <p>I'm writing about my experience migrating data from ResourceMate 3 Plus to the open-source software, Koha ILS 3.12 since there wasn't much information available at all when I did it. Hopefully this can help someone else out. Just to clarify, I'm not
+      an expert in ResourceMate, Koha, libraries in general or anything. This won't be a detailed guide either, just a collection of notes.</p>
+    <h3>Why I left you</h3>
+    <p>I was very tired of ResourceMate, I am a huge fan of open-source so when I found Koha I was thrilled. The organization does not have much money to spend on our library so it is nice to not be inhibited by pricings. With Koha I can have as many terminals
+      as I want, it's all web-based so almost no software is needed to be installed, plus it can run on Ubuntu and other distributions of Unix/Linux. The biggest thing that bothered me on ResourceMate was having to pay an annual fee to access information
+      from the Library of Congress, universites, etc.</p>
+    <h3>MARC? Who?</h3>
+    <p>Since I had the Plus version, I could export my MARC data on the Plus menu at the top of ResourceMate. Let's step back though, <span style=text-decoration:underline>MARC</span> is basically a way to keep information about materials such as books,
+      videos, etc. ResourceMate uses this but it makes it look pretty and you don't see what's happening behind the scenes. MARC sorts information by numbers, 000-999. So each of those numbers is a <span style=text-decoration:underline>field</span>, there's
+      also <span style=text-decoration:underline>subfields</span>, these are alphabetical.</p>
+    <p>For example, in my library (it could be different for others) 245 is the Title Statement field, the actual title goes under subfield "a" which is called "Title". The remainder of the title goes under subfield "b". For example, the book <em>In His Grip</em>      would have subfield "a" filled with the data, "In His Grip" (without the quotation marks). Subfield "b" would have "Foundations for Life &amp; Golf" because that's the remainder of the title, or the subtitle. There's many fields and subfields but
+      whether you want them filled in or not depends on your particular situation. I'm not going to go into detail about all the different fields only that you understand how MARC works.</p>
+    <p>Here's where it gets complicated, and I start to forget how I did this, here's what I wish someone would have told me when I started, it could have saved me a whole lot of pain. In ResourceMate, all the information about an item is in one record.
+      So the book title, author, date published, barcode, location, call number, etc. is all in one spot. <span style=text-decoration:underline>In Koha, there's two.</span> Well technically I think there's more but bear with me. In Koha, there's what's
+      called a <span style=text-decoration:underline>biblio</span> record and an <span style=text-decoration:underline>item</span> record.</p>
+    <h3>Biblio</h3>
+    <p>The biblio record contains information about a particular published book. Let's say that I have 1274 copies of Nancy Reagan's <em>To Love a Child </em>published in 1982. Well the biblio record for each of those 1274 books is exactly the same. Each
+      of those books have the same title, author, date, number of pages and so on. So why not just use one biblio record? Well that's what Koha does, if you lookup <em>To Love a Child</em> by Nancy Reagan, you'll get <span style=text-decoration:underline>one</span>      record pertaining to the 1274 copies.</p>
+    <h3>Item</h3>
+    <p>The item record contains information specific to the actual copy of the book. This would be information like the barcode because each book should have a different barcode, the condition, location, if it's checked out or not and to whom, type of item,
+      call number (I'll get to this later), etc. So we'll have one biblio record for the book and 1274 individual records for each physical copy of the book we have. So if someone partially eats the 546'th copy, I can tell the computer that that one is
+      damaged, that will only be for copy 546, not all 1274. The computer can keep track of all the copies going in and out of the library.</p>
+    <p>By the way, I would like to say that we only have one copy of this book, it just seems comical to have 1274.</p>
+    <p>So since ResourceMate combines the biblio and the item record but Koha seperates them, there needs to be a lot of modification of the MARC data before Koha will take it.</p>
+    <h3>Migration</h3>
+    <p><span style=text-decoration:underline>Let me just say here</span>, I'm not going to go back and look at what I did exactly and write it here, I don't remember and all that data is on an inactive computer. I'm just going to say what I did generally
+      speaking, you'll either have to figure it out, find another help article or get a professional migrating service. I would highly reccomend the latter, even though I migrated the data, I lost things, the data got a bit messy and just wasn't the best
+      way to do it.</p>
+    <p>So I basically had to export the data from ResourceMate in groups of the item types because I had to use a program called MARCedit to insert the data into the record saying what type it was for Koha. I also had to move the barcode information from
+      a field to another.</p>
+    <h3>Call Numbers</h3>
+    <p>So in ResourceMate, I believe it stores the call number in field 090a. Well in Koha, call numbers are part of the item record. So that was something that took me a long time to figure out and is making my life a lot more difficult, let me reiterate
+      the reccomendation above to hire a professional service for migration.</p>
+    <h3>Record Matching</h3>
+    <p>Since I didn't understand about the difference between biblio and item records when I did this, I didn't use the Koha feature for record matching by ISBN. This makes it so when you import your MARC data, you have one biblio record for duplicate copies
+      of items. Unfortunately now, I have to live with seperate records and fix them over time. EDIT: (Since writing I found a SQL report <a href=http://wiki.koha-community.org/wiki/SQL_Reports_Library#Duplicate_ISBNs_Alternative>here</a> titled "Duplicate
+      ISBNs Alternative". It searches the catalog for records with duplicate ISBNs, also with links to quickly merge the blblio records. The report below it also searches for duplicate titles.)</p>
+    <p>That's just about it, it's a long and disorganized post but hopefully these notes help you in your future endeavors. If you have any questions which you think I might be able to answer just email me at kenan()kenanscott.com But let me reiterate that
+      I'm not an expert on any of this.</p>
+  </article>
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KGPTZZ');
+  </script>
+  <!-- End Google Tag Manager -->
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="author" content="Kenan Scott">
+  <title>Having Read the Bible - Kenan's Place</title>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGPTZZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../gallery.html">Gallery</a>
+      <a class="pill-active" href="../blog.html">Blog</a>
+    </nav>
+    <h1>Kenan's Place</h1>
+  </header>
+  <article>
+    <h3>Having Read the Bible: A Reflection</h3>
+    <h5>Kenan Scott<br>21 August 2016</h5>
+    <p>In March of 2015 I began a journey through God’s word as I had never done before. I was to read all of the Bible, the New Testament and then onto the Old Testament.</p><b>The Method</b>
+    <p>It was a simple 2013 NLT paperback recently purchased for this purpose but instead of reading normally as I might any other book, I decided to follow a method taught to me by others that I know. I would use coloured pencils to mark and diagram what
+      was written, as seen in the image. This gave several benefits, including:</p>
+    <ul>
+      <li>The process made me slow down, reading every word as I very often gloss over pages of text, missing all but the basic ideas.</li>
+      <li>The markings help tremendously both in understanding the structure of the book and helping me when looking back to review a section.</li>
+      <li>I could more easily find certain parts of the Bible because I knew where they are located on the page, even if I don’t know the specific page.</li>
+    </ul>
+    <p>While reading the New Testament there are many quotes of the Old Testament. I would write where a passage was quoted on the appropriate page in the Old Testament. This was extremely helpful when I went back to read the Old Testament and was able to
+      better interpret using the New Testament.</p>
+    <p>Similarly, when there are two or more books which told about the same events I would write out the cross-reference. For example: the Gospels or the books referencing Israel/Judah's history.</p>
+    <p><b>The Reading</b></p>
+    <p>Reading the whole Bible through was difficult, these books in particular:</p>
+    <ul>
+      <li>Exodus 20-Deuteronomy. Most of this is law, although Numbers has more linear story than the rest.</li>
+      <li>1 and 2 Chronicles. A lot of this is the previous books, 1 Samuel - 2 Kings but again.</li>
+      <li>Isaiah-Jeremiah. The Major prophets are all together so the long books can become tiring.</li>
+    </ul>
+    <p>But even though these were difficult sections, I am glad I read through them, the value is tremendous.</p>
+    <p>I started with the New Testament because it gives a lamp to the Old. In the Old Testament times there was a great Mystery, which we now know as the Mystery of Jesus Christ.</p>
+    <blockquote class=quote>
+      <p>This salvation was something even the prophets wanted to know more about when the prophesied about this gracious salvation prepared for you. They wondered what time or situation the Spirit of Christ within them was talking about when he told them
+      in advance about Christ's suffering and his great glory afterward. They were told that their messages were not for themselves but for you. And now this Good News had been announced to you by those who preached in the power of the Holy Spirit from
+      heaven.</p>
+      <small>1 Peter 1:10-12</small>
+    </blockquote>
+    <p>So there is no reason that I can see to read the Old Testament without even the basic knowledge of the announcement of this salvation. But ultimately, it is all useless to read if I don't allow the Holy Spirit to speak to me and allow God to mold
+      me through it.</p>
+    <p>This all took a little over a year to complete, using coloured pencils in everything I read.</p>
+    <p><b>The Takeaway</b></p>
+    <p>Having grown up in church I suppose I thought I knew everything that was in the Bible already but I most certainly did not. A few highlights:</p>
+    <ul>
+      <li>"All of us must die eventually. Our lives are like water spilled out on the ground which cannot be gathered up again. But God does not sweep life away; instead, he devises ways to bring us back when we have been separated from him." - 2 Samuel 14:14</li>
+      <li>God's heart for the nations is throughout the whole Bible, not just when we get to The Great Commission.</li>
+      <li>God warned his people so much and gave them so many chances to repent until they were sent into exile, but still there was the clear hope for their return and reconciliation.</li>
+      <li>Jesus is throughout the Old Testament as well but only mentioned in brief snippets. You can see that hope built up for when we get to the Gospels.</li>
+      <li>In general, the amount of time between events feels a lot longer than when you're just flipping through. These are thousands of years we're working with.</li>
+    </ul>
+    <p><b>The Conclusion</b></p>
+    <p>Reading the whole Bible was an extremely valuable pursuit for me and I'm glad that God taught me throughout the process. I will move onto the New Testament now again, as many people have said, every time you read the Bible you will find something
+      new.</p>
+  </article>
+</body>
+
+</html>

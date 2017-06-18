@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KGPTZZ');
+  </script>
+  <!-- End Google Tag Manager -->
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="author" content="Kenan Scott">
+  <title>It's Different Here - Kenan's Place</title>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGPTZZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../gallery.html">Gallery</a>
+      <a class="pill-active" href="../blog.html">Blog</a>
+    </nav>
+    <h1>Kenan's Place</h1>
+  </header>
+  <article>
+    <h3>It's Different Here</h3>
+    <h5>Kenan Scott<br>20 February 2014</h5>
+    <p>Hello friends, family and others! To recap, I'm in England with Youth with a Mission (YWAM) for a couple more months, our purpose is to know God and make him known.</p>
+    <p>I'm in Discipleship Training School (DTS), it consists of about three months of lecture phase and then two months of outreach, taking what we've learned and applying it. Classes are great, we have different speakers every week on different topics.
+      We learn about how we can apply what is in the Bible to our lives. This particular week we learned about how different people have different personalities that God has created them with and how we can learn to relate and work with people better
+      if they're different from us.</p>
+    <p>Outreach phase is a little over two months away, I'll be going to Romania and Northern Ireland! By the next time I actually write here I'll probably have a better idea of what I'm going to be doing specifically but a few of the possibilities are working
+      with church plants, Roma and youth ministries.</p>
+    <p>God has been doing a lot on this DTS so far, there's been a lot of breakthrough in lives, as well as my own. Not a day goes by that we don't learn something new, about God, each other or England.</p>
+    <p>It is very nice here, one of my favorite things to do over the weekend is to go to London, wandering around the areas around the train stations without any particular place to go. England has been getting a lot more rain than usual lately which is
+      causing flooding in certain parts of the country. Please pray for that as it is causing a lot of damage and people are being displaced. That's it for now, I'll try to think of things to write about for next time. Oh and remember, trousers.</p>
+  </article>
+</body>
+
+</html>

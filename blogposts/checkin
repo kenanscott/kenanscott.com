@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<head>
+  <!-- Google Tag Manager -->
+  <script>
+    (function(w, d, s, l, i) {
+      w[l] = w[l] || [];
+      w[l].push({
+        'gtm.start': new Date().getTime(),
+        event: 'gtm.js'
+      });
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != 'dataLayer' ? '&l=' + l : '';
+      j.async = true;
+      j.src =
+        'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+      f.parentNode.insertBefore(j, f);
+    })(window, document, 'script', 'dataLayer', 'GTM-KGPTZZ');
+  </script>
+  <!-- End Google Tag Manager -->
+  <link rel="stylesheet" type="text/css" href="../style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="author" content="Kenan Scott">
+  <title>Planning Center Check-Ins on a Raspberry Pi - Kenan's Place</title>
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGPTZZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <header>
+    <nav>
+      <a href="../">Home</a>
+      <a href="../about.html">About</a>
+      <a href="../gallery.html">Gallery</a>
+      <a class="pill-active" href="../blog.html">Blog</a>
+    </nav>
+    <h1>Kenan's Place</h1>
+  </header>
+  <article>
+    <h3>How to set up a Planning Center Check-Ins station on a Raspberry Pi</h3>
+    <h5>Kenan Scott<br>27 March 2017</h5>
+    <h4>Introduction</h4>
+    <p>This is a tutorial to use Planning Center Check-Ins on a Raspberry Pi 3 Model B running Raspbian, printing to a locally installed Zebra GK420d label printer. Resulting in an extremely fast, no hassle check-in experience.
+      You can apply this to other Linux distributions on different machines. I didn't test any other printers, see below for more information. This tutorial is written assuming that you are unfamiliar with Linux, so it will be lengthy.
+      Therefore, I will point out important parts for pros <span class="text-primary">like this.</span></p>
+    <h4>Optional Backstory</h4>
+    <p>At my church as Technical Director, I have to do computer maintenance as well. We use Planning Center Check-Ins for our children's programs and print out the labels for the kids and their parents. In the past we had a laptop running Check-Ins which was unfortunately
+      updated to Windows 10. Ever since then it became incredibly slow, even after resetting the entire system multiple times. Booting the computer actually took about three minutes. Starting Firefox took about one minute and once you were finally ready to
+      check-in, it would often not print, requiring you to restart the Dymo 450 Turbo printer or the laptop itself. And of course, Windows 10 will always update at the worst times, possibly causing an indefinite delay when you try to restart (one of the reasons I hate
+      Windows so much). I decided that we needed to install a system that <strong>just works</strong>. Planning Center Check-Ins for computers only officially supports Mac and Windows. I don't want to use Mac because it will cost too
+      much. New Windows hardware would also be too expensive, and we're liable to run into the same situations as before. In my opinion, Windows does not <strong>just work</strong>, it's bloated and slow. So, since the laptop was beaten up, causing
+      the hardware not to work too well, I got a Raspberry Pi 3 Model B to try a Linux solution.</p>
+    <h4>Materials</h4>
+    <ul>
+      <li>
+        <a href="https://www.raspberrypi.org/products/raspberry-pi-3-model-b/">Raspberry Pi 3 Model B</a>
+        <ul>
+          <li>
+            Our computer for this tutorial, feel free to use something else if you know how
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="https://www.raspberrypi.org/products/universal-power-supply/">Power supply for Raspberry Pi</a>
+        <ul>
+          <li>
+            You don't have to use the official power supply, just a good one with micro-USB connection, outputting 2 amps at 5 volts
+          </li>
+        </ul>
+        <li>
+          USB keyboard
+        </li>
+        <li>
+          USB mouse
+        </li>
+        <li>
+          HDMI Monitor and HDMI cable
+        </li>
+        <li>
+          MicroSD card
+          <ul>
+            <li>
+              This will run the operating system and hold all our files, ideally this will be a fast MicroSD card
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://www.raspberrypi.org/products/raspberry-pi-case/">Raspberry Pi case (optional)</a>
+        </li>
+        <li>
+          A Windows computer (for setup)
+          <ul>
+            <li>
+              I wish it weren't true but you will have to briefly use Windows to configure the printer, don't worry, it shouldn't take long.
+            </li>
+          </ul>
+        </li>
+        <li>
+          Zebra GK420d printer with power and USB cables
+          <ul>
+            <li>
+              See Notes on Printers below
+            </li>
+          </ul>
+        </li>
+    </ul>
+    <h4>
+      Note on Printers
+    </h4>
+    <p>
+      Planning Center Check-Ins supports two different methods/brands of printing: Dymo and Zebra.
+    </p>
+    <p>With Dymo, you install their software on your Mac or Windows computer. Dymo runs a program in the background that listens for instructions. When you check someone in on the Planning Center website, the page sends instructions
+      to that program to print a label. This will not work on Linux because Dymo does not make their software for Linux.
+    </p>
+    <p>
+      With Zebra, the process is very similar. Instead of the page sending instructions to a program made by Zebra, it sends instructions to a program called QZ Tray, an open-source application which is also made for Linux, that's
+      our opening into making this work. Planning Center sends QZ Tray data in the <a href="https://en.wikipedia.org/wiki/Zebra_(programming_language)">ZPL format</a>, Zebra's proprietary language for talking to their label printers. Therefore, whichever printer
+      you try to use has to support ZPL. Otherwise the printer is just going to print the raw code because it doesn't know any better. Again, the only ZPL printer I've tested is the GK420d, I am not guaranteeing anything. <a href="https://pcocheck-ins.zendesk.com/hc/en-us/articles/218452578-Zebra-Printer-Setup">Here</a> Planning Center says that the GX420d, GK420d and GK420t work, one might assume that these would work in this project as well.
+    </p>
+    <h4>
+      Note on Operating Systems
+    </h4>
+    <p>
+      If you're a pro user, then just know that you can most likely use any major Linux distribution. I used Raspbian since it's already made for the hardware that I am using.
+    </p>
+    <h4>
+    Part One: Configuring the Printer
+  </h4>
+    <p>
+      Let's get rid of the least desirable part first, getting the printer ready. The GK420d has settings stored inside it including a setting which says how big the labels are. You can usually see if it's already correct already by holding the feed button down until
+      it starts flashing, then release immediately. It should print something like a configuration sheet. If it looks accurate and aligned your printer is most likely already set up correctly. If not, we'll have to use Windows
+      to configure it since Zebra only makes the utility for Windows.
+    </p>
+    <ol>
+      <li>
+        <a href="https://www.zebra.com/us/en/products/software/barcode-printers/zebralink/zebra-setup-utility.html">Download the Zebra Setup Utilities setup</a>
+      </li>
+      <li>
+        Connect the printer to the computer, power the printer on. Then, open the Zebra Setup Utilities, your printer should automatically be listed on the top.
+      </li>
+      <li>
+        Press "Configure Printer Settings", <span class="text-primary">input the width and height of your labels</span>. Continue to press Next and then Finish at the end, usually you can leave all the other settings alone.
+      </li>
+      <li>
+        Press Close to exit the program, disconnect the printer from the computer.
+      </li>
+    </ol>
+    <h4>
+    Part Two: Setting up the SD card
+  </h4>
+    <p>
+      Instead of a regular drive, the RasPi stores everything on a MicroSD card, we'll need to install the Raspbian operating system on the MicroSD card.
+    </p>
+    <ol>
+      <li>
+        Follow the instructions <a href="https://www.raspberrypi.org/downloads/raspbian/">here at the Raspberry Pi site</a> to prepare your SD card.
+      </li>
+      <li>
+        Insert the SD card in your RasPi (not much in this section!)
+      </li>
+    </ol>
+    <h4>
+      Part Three: Setting up the Raspberry Pi
+    </h4>
+    <ol>
+      <li>
+        Connect the mouse, keyboard, printer, HDMI and then power to the RasPi. It will power on and come to the desktop in a few seconds.
+      </li>
+      <li>
+        Let's first connect to the Internet, if you're using Ethernet, you can plug right in. For Wi-Fi, press the icon on the top-right with the two red Xs, select your network, enter your pre-shared key and press OK. Test your connection with the web browser,
+        it is the globe icon on the top-left.
+      </li>
+      <li>
+        Raspbian is configured for use in the United Kingdom by default. You may not know that they have different keyboards and things there, if you're not in the UK, then you'll need to set the locale differently. Press the raspberry icon on the top-left, go to Preferences and then click on Raspberry Pi Configuration.
+      </li>
+      <li>
+        Select the Localisation tab and set each option accordingly, in particular the keyboard.
+      </li>
+      </ol>
+    <h4>
+  Part Four: Installing CUPS
+    </h4>
+    <ol>
+      <li>
+        We'll <span class=text-primary>install CUPS</span>, this is a service for Unix-like systems to facilitate printing. Press the Raspberry icon on the top-left, go to Accessories and then click Terminal.
+      </li>
+      <li>
+        In the terminal, type <code>sudo apt update</code> and then enter. This will give the RasPi a fresh listing of all the software packages available.
+      </li>
+      <li>
+        After the update is complete, enter <code>sudo apt install cups</code>, it will list everything it will install, asking if you want to proceed, enter <code>y</code> and CUPS will install.
+      </li>
+      <li>
+        After completion, CUPS will start running in the background. We need to give our user permission to change CUPS settings, enter <code>sudo usermod -a -G lpadmin pi</code>
+      </li>
+      <li>
+        We'll now tell CUPS about our label printer. Open the web browser (Chromium) using the globe icon on the top-left.
+      </li>
+      <li>
+        You manage CUPS by a webserver running locally (on RasPi). Go to this address <a href="localhost:631">localhost:631</a>. Click on "Adding Printers and Classes" in the middle. Note that if in CUPS it asks you for your username and password,
+        enter pi as the username and raspberry as the password.
+      </li>
+      <li>
+        Press the "Add Printer" button, under Local Printers select the Zebra Technologies printer and then Continue.
+      </li>
+      <li>
+        Enter a location if you wish. If you want to let other devices print to this computer, check Share This Printer. I won't go into details about printer sharing.
+      </li>
+      <li>
+        This is a super-important part which you could easily miss, it will ask you what the make/model of the printer is, but we're not going to use Zebra/Zebra ZPL printer. The reason is that Planning Center will send raw ZPL data to the printer. If we select
+        the ZPL driver, CUPS will convert the data sent to the printer into ZPL code, we're already getting ZPL code so this would cause the printer to print code instead of the styled label. So press "Select Another Make/Manufacturer",
+        <span
+        class="text-primary">select "Raw" as the Make and "Raw Queue (en)"" as the model.</span>
+      </li>
+      <li>
+        Make sure that starting and ending banner are set to none and then press "Set Default Options"
+      </li>
+    </ol>
+    <h4>
+      Part Five: Installing QZ Tray
+    </h4>
+    <p>
+      We need to <span class="text-primary">install QZ Tray.</span> It will be the connection between the Planning Center Check-Ins website and CUPS.
+    </p>
+    <ol>
+      <li>
+        In Chromium, go to <a href="https://qz.io/download/">https://qz.io/download/</a> Download QZ Tray 2.0 with the green button on the right-hand side. Chromium will say that This type of file can harm your computer, tell it to Keep.
+      </li>
+      <li>
+        Back in the terminal, we'll first need to give permission to run the installer file, enter <code>sudo chmod 700 ~/Downloads/NAME_OF_FILE</code>, replace NAME_OF_FILE with the actual file's name, it will be something like qz-tray-2.0.3.run. If you press tab, it will give you hints on what file it is.
+      </li>
+      <li>
+        Now we'll run the installer by entering <code>sudo ~/Downloads/NAME_OF_FILE</code>, again replacing NAME_OF_FILE with the actual file's name. It will ask if you are sure you want to install QZ Tray, enter <code>y</code>. In a bit it will ask if you want to fetch Certutil, enter <code>y</code>.
+      </li>
+      <li>
+        After it says that it's finished, an icon should appear on the top-right depicting a label printer, that is QZ Tray running, it will turn green after a few seconds, indicating that it's ready to go.
+      </li>
+      <li>
+        Right click the QZ Tray icon, ensure that the "Automatically start" option is checked, click it if not.
+      </li>
+    </ol>
+    <h4>
+      Part Six: Testing Check-Ins
+    </h4>
+    <p>
+      Now the fun part
+    </p>
+    <ol>
+      <li>
+        Go to <a href="https://check-ins.planningcenteronline.com">https://check-ins.planningcenteronline.com</a> and sign in. At some point, QZ Tray will popup and say that Planning Center wants to connect to QZ. Check "Remember this decision" and then press Allow.
+      </li>
+      <li>
+        Press Make Station at the top of the page and follow the steps, have it print to this station. At the end, go to station mode as usual.
+      </li>
+      <li>
+        On the station page, your printer's name should show at the bottom. The RasPi already has a Chromium ad blocker plugin called uBlock Origin installed, but we're going to tell it to disregard Planning Center by pressing the shield to the right of the address bar, click the big power button and then the refresh button below it.
+      </li>
+      <li>
+        Check into an event like normal, the printer should produce the correct label immediately.
+      </li>
+    </ol>
+    <h4>
+      Part Seven: Security Configuration
+    </h4>
+    <ol>
+      <li>
+        For this tutorial we assumed that the check-in personnel will use the RasPi as an "administrator" user, for simplicity. In Linux there are two types of users: root and everyone else. root has the power and permissions to do anything it wants, even if it would wreck the system. Remember when we used the <code>sudo</code> command in the terminal before? sudo runs a command as if root was running the command, giving the ability to perform system functions. Usually in Linux, before using sudo, you have to enter your user password first, but by default Raspbian doesn't ask. So we're going to require that password to increase security on this machine. In the terminal, enter <code>sudo nano /etc/sudoers.d/010_pi-nopasswd</code>
+      </li>
+      <li>
+        Now we're in a text editor, the only line should be <code>pi ALL:(ALL) NOPASSWD: ALL</code>, move the cursor to the beginning of the file (top-left) with the arrow keys and <span class=text-primary>type in</span> <code># </code>, this comments out the line telling sudo to not ask for the user's password. Press Control-O and then <code>y</code> to save changes, press Control-X to exit the text editor
+      </li>
+      <li>
+        You can test the changes by exiting terminal, starting terminal again and entering <code>sudo apt update</code>, it should show a first-time warning and ask for your user password instead of updating the packages list right away.
+      </li>
+      <li>
+        Now let's change the password for the pi user so we're not using the default password for every Raspberry Pi. Go to the Raspberry icon on the top-left, Preferences and then Raspberry Pi Configuration. Press the Change Password button, enter raspberry as the current password and your new password twice, then press OK.
+      </li>
+    </ol>
+    <h4>
+      Conclusion
+    </h4>
+    <p>
+      Let me know if you have any questions, comments, feedback. Please let me know if a particular printer does or does not work on Linux. You can contact me by email, <a href="mailto:kenan@kenanscott.com">Send email</a>
+ or any of the contact options on my <a href="https://kenanscott.com">front page.</a>
+  </article>
+</body>
+
+</html>
