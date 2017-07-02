@@ -35,9 +35,9 @@
   <header>
     <nav>
       <a href="/">Home</a>
-      <a href="about.html">About</a>
-      <a href="gallery.html">Gallery</a>
-      <a class="pill-active" href="blog.html">Blog</a>
+      <a href="about">About</a>
+      <a href="gallery">Gallery</a>
+      <a class="pill-active" href="blog">Blog</a>
     </nav>
   <h1>Kenan's Place</h1>
   </header>
@@ -46,58 +46,58 @@
     <h2>How to set up a Planning Center Check-Ins station on a Raspberry Pi</h2>
     <h4>31 March 2017</h4>
     <p>Today, I'll give you a fairly detailed tutorial on how to use Planning Center Check-Ins on a Raspberry Pi 3 Model B running Raspbian, printing to a locally installed Zebra GK420d label printer. Resulting in a super-fast, no hassle check-in experience.
-      This can easily be applied to other Linux distributions on different machines.</p><a href="blogposts/checkin.html">Continue reading</a>
+      This can easily be applied to other Linux distributions on different machines.</p><a href="blogposts/checkin">Continue reading</a>
       <hr>
     </article>
   <article>
     <h2>Having Read the Bible: A Reflection</h2>
     <h4>21 August 2016</h4>
-    <p>In March of 2015 I began a journey through God’s word as I had never done before. I was to read all of the Bible, the New Testament and then onto the Old Testament.</p><a href="blogposts/bible.html">Continue reading</a>
+    <p>In March of 2015 I began a journey through God’s word as I had never done before. I was to read all of the Bible, the New Testament and then onto the Old Testament.</p><a href="blogposts/bible">Continue reading</a>
     <hr>
   </article>
   <article>
     <h2>Using Spotify on Lubuntu 12.04.5 with a Non-SSE2 CPU</h2>
     <h4>14 March 2015</h4>
     <hr>
-    <p>Recently I acquired a computer which is ancient as far as laptops go, the Sony PCG-FXA63 was low-end for its time. The best operating system I could give it was Lubuntu 12.04.5 but still it runs extremely slowly.</p><a href="blogposts/spotify.html">Continue reading</a>
+    <p>Recently I acquired a computer which is ancient as far as laptops go, the Sony PCG-FXA63 was low-end for its time. The best operating system I could give it was Lubuntu 12.04.5 but still it runs extremely slowly.</p><a href="blogposts/spotify">Continue reading</a>
   </article>
   <article>
     <h2>DTS as a Whole</h2>
     <h4>15 June 2014</h4>
-    <p>I don’t think I could ever be able to fully express what God has done in my life the past six months, this will be my attempt in writing.</p><a href="blogposts/dts.html">Continue reading</a>
+    <p>I don’t think I could ever be able to fully express what God has done in my life the past six months, this will be my attempt in writing.</p><a href="blogposts/dts">Continue reading</a>
     <hr>
   </article>
   <article>
     <h2>What Comes Next?</h2>
     <h4>19 April 2014</h4>
     <p>A year ago I couldn’t imagine that I would be in Romania talking to people about Jesus but here I am. What I was doing a year ago was quite valuable, not a waste of time, even though it sometimes felt like it. I didn’t feel like I belonged there,
-      I wanted to really help people but it didn’t feel like I was doing that.</p><a href="blogposts/next.html">Continue reading</a>
+      I wanted to really help people but it didn’t feel like I was doing that.</p><a href="blogposts/next">Continue reading</a>
     <hr>
   </article>
   <article>
     <h2>It's Different Here</h2>
     <h4>20 February 2014</h4>
-    <p>Hello friends, family and others! To recap, I’m in England with Youth with a Mission (YWAM) for a couple more months, our purpose is to know God and make him known.</p><a href="blogposts/different.html">Continue reading</a>
+    <p>Hello friends, family and others! To recap, I’m in England with Youth with a Mission (YWAM) for a couple more months, our purpose is to know God and make him known.</p><a href="blogposts/different">Continue reading</a>
     <hr>
   </article>
   <article>
     <h2>Controlling Reaper with the Tascam DM-3200</h2>
     <h4>18 December 2013</h4>
     <p>This is what you may call a “special interest post” but I feel that there isn’t enough information on this already so I might as well share. This guide will show how to use the Tascam DM-3200 (and theoretically the DM-4800) to interface with Reaper.
-      This does not show you how to record with the Firewire card into Reaper. The following features should be available to you afterwards on eight channels.</p><a href="blogposts/tascam.html">Continue reading</a>
+      This does not show you how to record with the Firewire card into Reaper. The following features should be available to you afterwards on eight channels.</p><a href="blogposts/tascam">Continue reading</a>
     <hr>
   </article>
   <article>
     <h2>YWAM!</h2>
     <h4>17 December 2013</h4>
-    <p>In a little less than a month I will be starting Discipleship Training School (DTS) with Youth with a Mission (YWAM). I’m really excited for this opportunity, I’ve been wanting to do this for about two years.</p><a href="blogposts/ywam.html">Continue reading</a>
+    <p>In a little less than a month I will be starting Discipleship Training School (DTS) with Youth with a Mission (YWAM). I’m really excited for this opportunity, I’ve been wanting to do this for about two years.</p><a href="blogposts/ywam">Continue reading</a>
     <hr>
   </article>
   <article>
     <h2>Going to Koha ILS from ResourceMate 3</h2>
     <h4>16 August 2013</h4>
     <p>I’m writing about my experience migrating data from ResourceMate 3 Plus to the open-source software, Koha ILS 3.12 since there wasn’t much information available at all when I did it. Hopefully this can help someone else out. Just to clarify, I’m not
-      an expert in ResourceMate, Koha, libraries in general or anything. This won’t be a detailed guide either, just a collection of notes.</p><a href="blogposts/koha.html">Continue reading</a>
+      an expert in ResourceMate, Koha, libraries in general or anything. This won’t be a detailed guide either, just a collection of notes.</p><a href="blogposts/koha">Continue reading</a>
     <hr>
   </article>
 </body>
