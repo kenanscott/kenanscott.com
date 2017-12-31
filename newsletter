@@ -24,6 +24,7 @@
   <meta charset="UTF-8">
   <meta name="author" content="Kenan Scott">
   <title>Newsletter - Kenan's Place</title>
+
 </head>
 
 <body>
@@ -44,19 +45,22 @@
   <main>
     <h3>Newsletter</h3>
     <p>Sign up to receive Kenan's newsletter by email</p>
-    <form>
+    <form id="newsletter-form" method="POST", action="/rest/contact">
+      <input id="form" name="form" hidden value="newsletter">
       <div class="form-group">
         <label for="name">Name</label>
-        <input id="name" class="form-control" type="text" required>
+        <input id="name" name="name" class="form-control" type="text" required>
       </div>
       <br>
       <div class="form-group">
         <label for="email">Email address</label>
-        <input id="email" class="form-control" type"email" required>
+        <input id="email" name="email" class="form-control" type"email" required>
       </div>
       <br>
       <button id="newsletter-form-submit" type="submit" class="btn btn-primary">Submit</button>
     </form>
+    <div id="feedback"></div>
   </main>
 </body>
+<script src="newsletter-client.js"></script>
 </html>
