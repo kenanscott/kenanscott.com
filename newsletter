@@ -23,7 +23,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="UTF-8">
   <meta name="author" content="Kenan Scott">
-  <title>About - Kenan's Place</title>
+  <title>Newsletter - Kenan's Place</title>
 </head>
 
 <body>
@@ -42,8 +42,8 @@
     <h1>Kenan's Place</h1>
   </header>
   <main>
-    <h3>About</h3>
-    <p>My name’s Kenan, I’m a child of God</p>
+    <h3>Newsletter</h3>
+    <p></p>
   </main>
 </body>
 </html>
