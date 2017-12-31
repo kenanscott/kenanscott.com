@@ -43,7 +43,20 @@
   </header>
   <main>
     <h3>Newsletter</h3>
-    <p></p>
+    <p>Sign up to receive Kenan's newsletter by email</p>
+    <form>
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" class="form-control" type="text" required>
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input id="email" class="form-control" type"email" required>
+      </div>
+      <br>
+      <button id="newsletter-form-submit" type="submit" class="btn btn-primary">Submit</button>
+    </form>
   </main>
 </body>
 </html>
