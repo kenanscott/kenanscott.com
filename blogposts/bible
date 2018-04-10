@@ -87,7 +87,7 @@
       new.</p>
   </article>
   <div id="lambda-comments"></div>
-  <script src="//s3-us-west-2.amazonaws.com/myblogcomments-websites3-17cchhk3mskx/lambda-comments.js"></script>
+  <script src="//kenanscott.com/lambda-comments.js"></script>
 </body>
 
 </html>
