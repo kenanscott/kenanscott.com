@@ -86,17 +86,8 @@
     <p>Reading the whole Bible was an extremely valuable pursuit for me and I'm glad that God taught me throughout the process. I will move onto the New Testament now again, as many people have said, every time you read the Bible you will find something
       new.</p>
   </article>
-  <div id="disqus_thread"></div>
-  <script>
-  (function() { // DON'T EDIT BELOW THIS LINE
-  var d = document, s = d.createElement('script');
-  s.src = 'https://kenanscott-com.disqus.com/embed.js';
-  s.setAttribute('data-timestamp', +new Date());
-  (d.head || d.body).appendChild(s);
-  })();
-  </script>
-  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments.</a></noscript>
-
+  <div id="lambda-comments"></div>
+  <script src="//s3-us-west-2.amazonaws.com/myblogcomments-websites3-17cchhk3mskx/lambda-comments.js"></script>
 </body>
 
 </html>
