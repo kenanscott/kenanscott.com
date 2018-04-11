@@ -146,8 +146,8 @@ label {
 
 /*Fix lambda-comments background*/
 .comments__preview___EE-sL {
-  background: none;
-  border: 0px;
+  background: none !important;
+  border: 0px !important;
 }
 
 /*Remove marketing for lambda-comments*/
