@@ -289,6 +289,8 @@
       Let me know if you have any questions, comments, feedback. Please let me know if a particular printer does or does not work on Linux. You can contact me by email, <a href="mailto:kenan@kenanscott.com">Send email</a>
  or any of the contact options on my <a href="https://kenanscott.com">front page.</a>
   </article>
+  <div id="lambda-comments"></div>
+  <script src="//kenanscott.com/lambda-comments.js"></script>
 </body>
 
 </html>
