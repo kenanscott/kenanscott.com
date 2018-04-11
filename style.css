@@ -150,6 +150,11 @@ label {
   border: 0px;
 }
 
+/*Remove marketing for lambda-comments*/
+.comments__marketing___3IrGS {
+    display: none;
+}
+
 /*CSS is based on https://bootswatch.com/darkly/ I didn't use it directly to accomplish a more minimal site.*/
 
 S
