@@ -50,7 +50,7 @@
       works on CPUs with SSE2, same with Windows apparently because it won't run with WINE.</p>
     <p>However, Spotify has a <a href=https://play.spotify.com>web player</a> available so we can just use that. But wait, you need Adobe Flash to run it!? I don't even know what function it serves but we need it. Adobe stopped supporting Flash for Linux
       a while ago, it's a dying technology anyways. We can get the latest developed build of the plugin but then we meet our old friend, you guessed him, it's SSE2, the plugin you download on the Adobe site only works on SSE2 processors. </p>
-    <p> We might give up at this point but someone thought of us and there's an older version of the Adobe Flash plugin available <a href=https://objects-us-west-1.dream.io/kenanscottsite/libgcflashplayer.so>here</a> which supports non-SSE2 CPU and it works
+    <p> We might give up at this point but someone thought of us and there's an older version of the Adobe Flash plugin available <a href="../libgcflashplayer.so">here</a> which supports non-SSE2 CPU and it works
       with Spotify Web Player. </p>
     <p>Now if you need it, I'll give a step-by-step guide to using Spotify Web Player with Firefox 35.01 on Lubuntu 12.04.5. This can be applied to other distributions of Linux/Ubuntu as well depending.</p>
     <p>Computer specifications:</p>
