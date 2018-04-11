@@ -144,6 +144,12 @@ label {
   border-color: #375a7f;
 }
 
+/*Override lambda-comments default styles */
+.comments__preview___EE-sL {
+  background: #222222;
+  border: 0px;
+}
+
 /*CSS is based on https://bootswatch.com/darkly/ I didn't use it directly to accomplish a more minimal site.*/
 
 S
