@@ -144,9 +144,9 @@ label {
   border-color: #375a7f;
 }
 
-/*Override lambda-comments default styles */
+/*Fix lambda-comments background*/
 .comments__preview___EE-sL {
-  background: #222222;
+  background: none;
   border: 0px;
 }
 
