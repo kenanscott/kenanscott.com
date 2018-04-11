@@ -152,7 +152,13 @@ label {
 
 /*Remove marketing for lambda-comments*/
 .comments__marketing___3IrGS {
-    display: none;
+  display: none;
+}
+
+.comments__spinnerButton___QpANF {
+  color: #fff !important;
+  background-color: #375a7f !important;
+  border-color: #375a7f !important;
 }
 
 /*CSS is based on https://bootswatch.com/darkly/ I didn't use it directly to accomplish a more minimal site.*/
