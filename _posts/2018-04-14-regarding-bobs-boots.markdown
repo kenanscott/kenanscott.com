@@ -2,7 +2,7 @@
 layout: post
 title:  "Regarding Bob's Boots"
 date:   2018-04-14 13:05:00 +0100
-categories: somd
+categories: somd life
 ---
 I've started the School of Ministry Development at YWAM Harpenden! I'm very excited to grow in these upcoming months along with the eight other trainees and four staff. Yesterday, we went on a treasure trail in Chesham, a market town about an hour from here. This outing was a good reflection of some of what to expect during this school.
 
