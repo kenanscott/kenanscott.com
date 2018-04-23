@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Spiritual Formation?"
-date:   2018-04-22 10:05:00 +0100
+date:   2018-04-23 07:00:00 +0100
 categories: somd lectures
 ---
 Our first week of lectures on the School of Ministry Development was Emmanuel Entee teaching on spiritual formation, but what does that even mean? Spiritual formation is simply becoming more and more of a reflection on Jesus Christ.
