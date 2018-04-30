@@ -208,7 +208,6 @@ textarea {
   border-radius: 0.25rem !important; }
 
 input {
-  display: block !important;
   padding: 0.375rem 0.75rem !important;
   font-size: 0.9375rem !important;
   font-family: Helvetica, Arial, sans-serif !important;
