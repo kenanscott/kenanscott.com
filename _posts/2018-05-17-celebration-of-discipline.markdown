@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Celebration of Discipline"
-date:   2018-05-18 8:00:00 +0100
+date:   2018-05-17 20:00:00 +0100
 categories: somd book-report
 ---
 Celebration of Discipline is a lovely book which focuses on practical ways to grow spiritually in your life with God. It calls us from the shallow into deep spiritual waters. The book looks at twelve classic spiritual disciplines:

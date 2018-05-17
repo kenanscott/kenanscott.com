@@ -148,7 +148,7 @@ code {
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
   border-radius: 3px;
-  background-color: #eef;
+  background-color: #47474C;
 }
 
 code {
@@ -160,6 +160,7 @@ pre {
   overflow-x: auto;
 
   > code {
+    background-color: #47474C;
     border: 0;
     padding-right: 0;
     padding-left: 0;
