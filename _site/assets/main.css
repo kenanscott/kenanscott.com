@@ -106,7 +106,7 @@ code {
   font-size: 15px;
   border: 1px solid white;
   border-radius: 3px;
-  background-color: #eef; }
+  background-color: #47474C; }
 
 code {
   padding: 1px 5px; }
@@ -115,6 +115,7 @@ pre {
   padding: 8px 12px;
   overflow-x: auto; }
   pre > code {
+    background-color: #47474C;
     border: 0;
     padding-right: 0;
     padding-left: 0; }
@@ -405,7 +406,7 @@ input {
 .highlight {
   background: #fff; }
   .highlighter-rouge .highlight {
-    background: #eef; }
+    background: #47474C; }
   .highlight .c {
     color: #998;
     font-style: italic; }
