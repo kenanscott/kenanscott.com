@@ -10,6 +10,8 @@ We can tend to dread fundraising and think of it as a neccesary evil to be able 
 
 A big takeaway is that fundraising is not about us, or money, it's about God's vision for each of our lives. When I speak to someone about what I am doing in England, I can be bold about what God has called me to do, what support I need to see it happen and ask for someone to be a part of the vision, to send young people out into the nations and all parts of society with the Good News.
 
+![Mountains](/assets/blog/mountains.jpg)
+
 Another challenge that I had was to keep a proper budget, which I have now started. It was one of those things that I just overlooked in moving here but it really is important. I'm actually good at working with a budget and keeping financial records but I had not applied that to my own life before. I will keep an accurate ledger just as if it was someone else's money that I was working with, because it is God's money, not mine anyways.
 
 I could keep writing about this week but I'm going to stop here for sake of time.
