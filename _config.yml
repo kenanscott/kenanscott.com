@@ -29,6 +29,11 @@ url: "https://kenanscott.com" # the base hostname & protocol for your site, e.g.
 #twitter_username: jekyllrb
 github_username:  kenanscott
 
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+minima:
+  date_format: "%-d %b %Y"
+
 # Build settings
 theme: minima
 plugins:
